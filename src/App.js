@@ -2,10 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Header} from "./layout";
 import {Container} from "@material-ui/core";
-import Home from "./pages/Home";
-import Contacts from "./pages/Contacts";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import {About, Category, Contacts, Home, Meal, NotFound} from "./pages";
 
 function App() {
 	return (
@@ -16,6 +13,8 @@ function App() {
 					<Container maxWidth="lg">
 						<Switch>
 							<Route exact path='/' component={Home}/>
+							<Route path='/categories/:name' component={Category}/>
+							<Route path='/meal/:id' component={Meal}/>
 							<Route path='/about' component={About}/>
 							<Route path='/contacts' component={Contacts}/>
 							<Route component={NotFound}/>
