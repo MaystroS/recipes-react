@@ -59,15 +59,7 @@ nav {
 	}
 	
 	&__desc {
-		display: flex;
-		align-items: center;
-		
-		& > span {
-			display: inline-flex;
-		}
-		
-		& > span.card__right {
-			margin-left: auto;
-		}
+		max-height: 100px;
+		overflow: hidden;
 	}
 }
