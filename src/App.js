@@ -7,7 +7,7 @@ import {About, Category, Contacts, Home, Recipe, NotFound} from "./pages";
 function App() {
 	return (
 		<>
-			<Router>
+			<Router basename='/recipes-react'>
 				<Header/>
 				<main className='main'>
 					<Container maxWidth="lg">
