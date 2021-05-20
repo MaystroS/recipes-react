@@ -34,7 +34,6 @@ export async function getAllCategories() {
 
 	try {
 		const {status, data: {categories}} = await http.get(endpoint);
-		console.log('response:', categories)
 
 		if (status !== 200) {
 			return [];
@@ -56,7 +55,6 @@ export async function getFilteredByCategory(name) {
 
 	try {
 		const {status, data: {meals}} = await http.get(endpoint, {params: {c: name}});
-		console.log('response:', meals)
 
 		if (status !== 200) {
 			return [];
@@ -78,7 +76,6 @@ export async function getMealById(id) {
 
 	try {
 		const {status, data: {meals}} = await http.get(endpoint, {params: {i: id}});
-		console.log('response:', meals)
 
 		if (status !== 200) {
 			return null;

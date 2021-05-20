@@ -12,10 +12,8 @@ function Home() {
 
 	const {pathname, search} = useLocation();
 	const {push} = useHistory();
-	console.log('T', pathname, search)
 
 	const onSearch = (searchStr) => {
-		console.log('onSearch', searchStr)
 		setFilteredCategories(
 			categories.filter(item =>
 				item.strCategory.toLowerCase().includes(searchStr.toLowerCase()
@@ -29,7 +27,6 @@ function Home() {
 	};
 
 	React.useEffect(() => {
-		//return;
 		getAllCategories()
 			.then(cats => {
 				setCategories(cats);

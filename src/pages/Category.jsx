@@ -11,7 +11,6 @@ function Category() {
 	const [isLoading, setIsLoading] = React.useState(false);
 
 	React.useEffect(() => {
-		//return;
 		setIsLoading(true);
 		getFilteredByCategory(name)
 			.then(m => setMeals(m))

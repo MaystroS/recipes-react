@@ -14,7 +14,6 @@ function Recipe() {
 		setIsLoading(true);
 		getMealById(id)
 			.then(r => {
-				console.log('Recipe', r)
 				setRecipe(r);
 			})
 			.finally(() => setIsLoading(false));
