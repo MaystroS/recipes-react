@@ -17,7 +17,11 @@ const http = axios.create({baseURL: API_URL})
  * @type Object
  * @property {string} idMeal -
  * @property {string} strMeal - "Apam balik"
+ * @property {string} strCategory - "Dessert"
  * @property {string} strMealThumb - "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"
+ * @property {string} strInstructions
+ * @property {string} strArea
+ * @property {string} strYoutube
  */
 
 
@@ -67,7 +71,7 @@ export async function getFilteredByCategory(name) {
 /**
  * Get recipes filtered by category name
  * @param id
- * @return {Promise<Meal[]>}
+ * @return {Promise<Meal>}
  */
 export async function getMealById(id) {
 	const endpoint = '/lookup.php';
@@ -77,10 +81,10 @@ export async function getMealById(id) {
 		console.log('response:', meals)
 
 		if (status !== 200) {
-			return [];
+			return null;
 		}
 
-		return meals;
+		return meals[0];
 	} catch (e) {
 		console.log('Error:', e);
 	}

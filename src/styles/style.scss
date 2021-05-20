@@ -63,3 +63,43 @@ nav {
 		overflow: hidden;
 	}
 }
+
+/*------------ Recipe -------------*/
+.recipe {
+	&__image {
+		width: 100%;
+		max-width: 500px;
+		overflow: hidden;
+		margin: 0 auto;
+		
+		& img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	
+	&__desc {
+	
+	}
+	
+	&__table {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	
+	&__video {
+		text-align: center;
+		
+		iframe {
+			width: 100%;
+			max-width: 560px;
+			aspect-ratio: 16/9;
+		}
+	}
+}
+
+.mb16 {
+	margin-bottom: 16px;
+}

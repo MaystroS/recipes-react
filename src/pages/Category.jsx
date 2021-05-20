@@ -9,16 +9,12 @@ function Category() {
 	const {name} = useParams();
 	const [meals, setMeals] = React.useState([]);
 	const [isLoading, setIsLoading] = React.useState(false);
-	console.log('params', name)
 
 	React.useEffect(() => {
 		//return;
 		setIsLoading(true);
 		getFilteredByCategory(name)
-			.then(m => {
-				console.log('Meals', m)
-				setMeals(m);
-			})
+			.then(m => setMeals(m))
 			.finally(() => setIsLoading(false));
 	}, [name]);
 

@@ -24,7 +24,7 @@ function MealItem({item}) {
 			</CardContent>
 			<CardActions>
 				<Button
-					to={`/meal/${item.idMeal}`}
+					to={`/recipe/${item.idMeal}`}
 					component={RouterLink}
 					color="primary"
 				>
