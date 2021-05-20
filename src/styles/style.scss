@@ -34,6 +34,18 @@ nav {
 	}
 }
 
+/*------------ Search -------------*/
+.search {
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	
+	&__icon,
+	&__btn {
+		margin: 0 8px;
+	}
+}
+
 /*------------ Card -------------*/
 .card {
 	height: 100%;
