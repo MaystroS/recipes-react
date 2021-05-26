@@ -1,3 +1,3 @@
 # Simple project on React 
 
-[Demo](https://MaystroS.github.io/recipes-react/).
+[Demo](https://serhiymaystro.github.io/recipes-react).
